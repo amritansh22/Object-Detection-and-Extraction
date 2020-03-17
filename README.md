@@ -3,6 +3,8 @@
 This is the code to caMicroscope code challenge.
 
 To run this file clone the repositry.
+
+###NOTE Please stop the cache storage of the browser, if not done properly the same imge would be shown evert time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
 ```
@@ -28,7 +30,7 @@ And then the bounding box dimensions are given.
 
 
 ##Working demo
-When you head over the link above(http://127.0.0.5:6302/),you should see a page like this:
+When you head over the link above(http://127.0.0.5:6302/) you should see a page like this:
 ![Screenshot (91)](https://user-images.githubusercontent.com/29978031/76889456-9fec9600-68ab-11ea-8935-60eabfc6bea6.png)
 
 We now upload an image, having two dogs.
@@ -48,4 +50,4 @@ The output would look like
 and the ouput page looks like:
 ![Screenshot (87)](https://user-images.githubusercontent.com/29978031/76890048-a596ab80-68ac-11ea-943f-372b13b13165.png)
 
-
+You could see there are no bounding boxes ouput here as there are no persons in the image.
