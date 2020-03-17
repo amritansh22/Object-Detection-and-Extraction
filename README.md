@@ -4,7 +4,7 @@ This is the code to caMicroscope code challenge.
 
 To run this file clone the repositry.
 
-###NOTE Please stop the cache storage of the browser, if not done properly the same imge would be shown evert time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
+### NOTE Please stop the cache storage of the browser, if not done properly the same imge would be shown evert time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
 ```
@@ -29,7 +29,7 @@ The total number of objects in the image is given along with the total number of
 And then the bounding box dimensions are given.
 
 
-##Working demo
+## Working demo
 When you head over the link above(http://127.0.0.5:6302/) you should see a page like this:
 ![Screenshot (91)](https://user-images.githubusercontent.com/29978031/76889456-9fec9600-68ab-11ea-8935-60eabfc6bea6.png)
 
