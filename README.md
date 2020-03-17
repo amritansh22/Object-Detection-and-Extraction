@@ -4,11 +4,11 @@ This is the code to caMicroscope code challenge.
 
 To run this file clone the repositry.
 
-### NOTE Please stop the cache storage of the browser, if not done properly the same imge would be shown evert time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
+### NOTE Please stop the cache storage of the browser, if not done properly the same image would be shown every time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
 ```
-Head over to folder
+Head over to the folder
 ```
 cd CaMicrosopeChallenge
 ```
