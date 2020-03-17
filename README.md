@@ -3,12 +3,19 @@
 This is the code to caMicroscope code challenge.
 
 To run this file clone the repositry.
-`$git clone`
+```
+git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
+```
 Head over to folder
+```
 cd CaMicrosopeChallenge
+```
 Run the app by the command
+``` python
 python flaskApp.py
+```
 Open a web browser and paste the following address in the search bar  
+
 http://127.0.0.5:6302/
 
 Now upload the image on which the object detection is to be performed.
