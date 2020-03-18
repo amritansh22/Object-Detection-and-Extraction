@@ -58,3 +58,25 @@ and the ouput page looks like:
 ![Screenshot (87)](https://user-images.githubusercontent.com/29978031/76890048-a596ab80-68ac-11ea-943f-372b13b13165.png)
 
 You could see there are no bounding boxes ouput here as there are no persons in the image.
+
+
+
+### Working example 2
+
+This is the image on which we will perform object detection. We will choose the class of person in the image.
+
+![test](https://user-images.githubusercontent.com/29978031/76990431-f3bfb380-696d-11ea-8ae8-86da10c4ad6c.jpg)
+
+We will get an output page like this 
+
+![Screenshot (93)](https://user-images.githubusercontent.com/29978031/76990678-5ca72b80-696e-11ea-8b93-2d5b3410251d.png)
+
+and the bounding box dimensions like this
+
+![Screenshot (95)](https://user-images.githubusercontent.com/29978031/76990776-87917f80-696e-11ea-8287-ecb558a7a1ae.png)
+
+The images of the extracted objects looks like this
+
+![Screenshot (94)](https://user-images.githubusercontent.com/29978031/76990898-b3ad0080-696e-11ea-904d-df2e83a513f4.png)
+
+
