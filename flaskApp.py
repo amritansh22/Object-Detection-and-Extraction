@@ -5,14 +5,20 @@ Created on Tue Mar 17 10:59:51 2020
 @author: Amritansh Vajpayee
 """
 
-import numpy as np
 import tensorflow as tf
 import cv2 as cv
-import flask, werkzeug, skimage.io, skimage.color, numpy, pickle
+import flask, werkzeug
 app = flask.Flask(import_name="CaMicrosopeChallenge")
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-
+app.config["CACHE_TYPE"] = "null"
+if app.config["DEBUG"]:
+    @app.after_request
+    def after_request(response):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
+        response.headers["Expires"] = 0
+        response.headers["Pragma"] = "no-cache"
+        return response
 def extractFeatures():
     img = flask.request.files["img"]
     img_name = img.filename
@@ -55,6 +61,8 @@ def extractFeatures():
         count_of_matched_class = 0
         count_of_total_class = 0
         list_bounding_boxes = []
+        c=0
+        cropped_image_path = []
         for i in range(num_detections):
             classId = int(out[3][0][i])
             score = float(out[1][0][i])
@@ -68,10 +76,21 @@ def extractFeatures():
                 if(classes_90[classId]==img_class):
                     count_of_matched_class = count_of_matched_class+1
                     cv.rectangle(img, (int(x), int(y)), (int(right), int(bottom)), (125, 255, 51), thickness=2)
+                    
+                    
+                    #x_up,y_up,x_down,y_down
+                    #c[1]:c[3], c[0]:c[2],:]
+                    #cropped_image=img[y_up:y_down,x_up:x_down]
+                    cropped_image=img[int(y):int(bottom),int(x):int(right)]
+                    cv.imwrite("static/cropped/"+str(c) + ".jpg", cropped_image)
+                    cropped_image_path.append("static/cropped/"+str(c) + ".jpg")
+                    c = c+1
+                    
+                    
                     list_bounding_boxes.append(bbox)
         #full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'new_img.jpg')
         cv.imwrite("static/data/new_img.jpg", img)
-    return flask.render_template(template_name_or_list="result.html",count_of_total_class=count_of_total_class,count_of_matched_class=count_of_matched_class,list_bounding_boxes=list_bounding_boxes,img_class=img_class)
+    return flask.render_template(template_name_or_list="result.html",count_of_total_class=count_of_total_class,count_of_matched_class=count_of_matched_class,list_bounding_boxes=list_bounding_boxes,img_class=img_class,cropped_image_path=cropped_image_path)
 
 app.add_url_rule(rule="/extract", view_func=extractFeatures,methods=["POST"], endpoint="extract")
 
@@ -79,4 +98,5 @@ def homepage():
     return flask.render_template(template_name_or_list="home.html")
 app.add_url_rule(rule="/", view_func=homepage)
 app.run(host="127.0.0.5", port=6302)
+
 

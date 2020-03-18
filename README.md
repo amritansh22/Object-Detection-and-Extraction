@@ -4,7 +4,8 @@ This is the code to caMicroscope code challenge.
 
 To run this file clone the repositry.
 
-### NOTE Please stop the cache storage of the browser, if not done properly the same image would be shown every time. I used Internet Explorer(See how to stop caching in IE http://bit.ly/2WpMBpN).
+# Now you can download all the extracted objects in the form of images. 
+
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
 ```
@@ -42,6 +43,12 @@ We recevie the output image as
 
 The output webpage look like this.
 ![Screenshot (90)](https://user-images.githubusercontent.com/29978031/76889845-56507b00-68ac-11ea-82de-4882f9ea8d4f.png)
+
+And the extracted objects are shown as
+
+You can see that all the extracted objects are shown as diffrent images.
+![Screenshot (92)](https://user-images.githubusercontent.com/29978031/76990027-4e0c4480-696d-11ea-940c-e1c79188159e.png)
+
 
 Had we selected a any other class we would see nothing.
 Say we choose class person.

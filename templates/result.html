@@ -11,7 +11,11 @@
 {%for i in list_bounding_boxes: %}
 <h4>{% print(i) %}</h4>
 {%endfor%}
+<h3>Cropped Images</h3>
 
+{%for path in cropped_image_path: %}
+<img src="{{path}}" >
+{%endfor%}
 <a href="{{url_for(endpoint='homepage')}}">Classify Another Image</a>
 </body>
 </html>
