@@ -2,9 +2,15 @@
 
 This is the code to caMicroscope code challenge.
 
-To run this file clone the repositry.
+To run this app 
 
-# Now you can download all the extracted objects in the form of images. 
+Head over to https://object-detection-nd-extraction.herokuapp.com/
+
+### or
+
+clone the repositry.
+
+
 
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
