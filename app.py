@@ -8,7 +8,7 @@ Created on Tue Mar 17 10:59:51 2020
 import tensorflow as tf
 import cv2 as cv
 import flask, werkzeug
-app = flask.Flask(import_name="CaMicrosopeChallenge")
+app = flask.Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config["CACHE_TYPE"] = "null"
