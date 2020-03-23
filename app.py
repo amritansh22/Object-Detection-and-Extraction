@@ -97,6 +97,10 @@ app.add_url_rule(rule="/extract", view_func=extractFeatures,methods=["POST"], en
 def homepage():
     return flask.render_template(template_name_or_list="home.html")
 app.add_url_rule(rule="/", view_func=homepage)
-app.run(debug=True, port=33507)
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
