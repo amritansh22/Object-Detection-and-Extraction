@@ -14,7 +14,7 @@ cd CaMicrosopeChallenge
 ```
 Run the app by the command
 ``` python
-python flaskApp.py
+python app.py
 ```
 Open a web browser and paste the following address in the search bar  
 
