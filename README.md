@@ -1,10 +1,9 @@
 # CaMicrosopeChallenge
 
-This is the code to caMicroscope code challenge.
+Web app to https://object-detection-nd-extraction.herokuapp.com/
 
-To run this file clone the repositry.
 
-# Now you can download all the extracted objects in the form of images. 
+You can also clone the repositry and then run
 
 ```
 git clone https://github.com/amritansh22/CaMicrosopeChallenge.git
@@ -15,7 +14,7 @@ cd CaMicrosopeChallenge
 ```
 Run the app by the command
 ``` python
-python flaskApp.py
+python app.py
 ```
 Open a web browser and paste the following address in the search bar  
 
@@ -38,8 +37,6 @@ We now upload an image, having two dogs.
 ![example](https://user-images.githubusercontent.com/29978031/76889680-070a4a80-68ac-11ea-97c3-d7fe855acb91.jpg)
 
 Select class of dog and press the button.
-We recevie the output image as
-![dog](https://user-images.githubusercontent.com/29978031/76889730-2608dc80-68ac-11ea-8497-5814f60003ce.jpg)
 
 The output webpage look like this.
 ![Screenshot (90)](https://user-images.githubusercontent.com/29978031/76889845-56507b00-68ac-11ea-82de-4882f9ea8d4f.png)
@@ -52,9 +49,7 @@ You can see that all the extracted objects are shown as diffrent images.
 
 Had we selected a any other class we would see nothing.
 Say we choose class person.
-The output would look like
-![dogno](https://user-images.githubusercontent.com/29978031/76889976-8566ec80-68ac-11ea-9d38-a538474d4bd6.jpg)
-and the ouput page looks like:
+The ouput page looks like:
 ![Screenshot (87)](https://user-images.githubusercontent.com/29978031/76890048-a596ab80-68ac-11ea-943f-372b13b13165.png)
 
 You could see there are no bounding boxes ouput here as there are no persons in the image.
