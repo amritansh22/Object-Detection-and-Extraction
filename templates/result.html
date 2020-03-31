@@ -8,10 +8,15 @@
 <h3>Total number of objects found: {{count_of_total_class}}<h3>
 <h3>Total number of objects of class '{{img_class}}' found: {{count_of_matched_class}}<h3>
 <h3>Bounding boxes of matched class objects</h3>
+
+<!- Now we start iterating over the list list_bounding_boxes which contains the bounding boxes of all the objects ->
+
 {%for i in list_bounding_boxes: %}
 <h4>{% print(i) %}</h4>
 {%endfor%}
 <h3>Cropped Images</h3>
+
+<!- Now we start iterating over the list cropped_image_path which contains the path of all the new images ->
 
 {%for path in cropped_image_path: %}
 <img src="{{path}}" >

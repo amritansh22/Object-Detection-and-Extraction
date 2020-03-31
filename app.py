@@ -82,9 +82,9 @@ def extractFeatures():
         c = 0                           #a counter to give unique address to extracted objects
         cropped_image_path = []         # list to store the destination address of the extracted object images.
         for i in range(num_detections):
-            classId = int(out[3][0][i])
-            score = float(out[1][0][i])
-            bbox = [float(v) for v in out[2][0][i]]
+            classId = int(out[3][0][i])     #id of the predicted class
+            score = float(out[1][0][i])     #score of the object predicted
+            bbox = [float(v) for v in out[2][0][i]]     #bounding box dimensions of the extracted objects.
             if score > 0.4:                                         #this is the threshold score 40%
                 count_of_total_class = count_of_total_class+1
                 x = bbox[1] * cols
