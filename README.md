@@ -34,8 +34,8 @@ When you head over the link above(http://127.0.0.5:6302/) you should see a page 
 ![Screenshot (91)](https://user-images.githubusercontent.com/29978031/76889456-9fec9600-68ab-11ea-8935-60eabfc6bea6.png)
 
 We now upload an image, having two dogs.
-![example](https://user-images.githubusercontent.com/29978031/76889680-070a4a80-68ac-11ea-97c3-d7fe855acb91.jpg)
 
+<img src = "https://user-images.githubusercontent.com/29978031/76889680-070a4a80-68ac-11ea-97c3-d7fe855acb91.jpg" width = "640px" height="400px">
 Select class of dog and press the button.
 
 The output webpage look like this.
