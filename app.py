@@ -116,6 +116,6 @@ app.add_url_rule(rule="/", view_func=homepage)
 # Running the app.
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug = True)
 
 

@@ -2,11 +2,19 @@
 <header>
 <title>Predicted Class</title>
 </header>
+<style>
+    body{
+        font-family: Arial;
+    }
+</style>
 <body>
 <h1>Final Image</h1>
 <img src="{{'static/data/new_img.jpg'}}" >
+<hr>
 <h3>Total number of objects found: {{count_of_total_class}}<h3>
+<hr>
 <h3>Total number of objects of class '{{img_class}}' found: {{count_of_matched_class}}<h3>
+<hr>
 <h3>Bounding boxes of matched class objects</h3>
 
 <!- Now we start iterating over the list list_bounding_boxes which contains the bounding boxes of all the objects ->
@@ -14,6 +22,7 @@
 {%for i in list_bounding_boxes: %}
 <h4>{% print(i) %}</h4>
 {%endfor%}
+<hr>
 <h3>Cropped Images</h3>
 
 <!- Now we start iterating over the list cropped_image_path which contains the path of all the new images ->
@@ -21,6 +30,9 @@
 {%for path in cropped_image_path: %}
 <img src="{{path}}" >
 {%endfor%}
+<hr>
+<br>
+<br>
 <a href="{{url_for(endpoint='homepage')}}">Classify Another Image</a>
 </body>
 </html>

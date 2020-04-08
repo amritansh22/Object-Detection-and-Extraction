@@ -2,38 +2,204 @@
 <header>
 <title>Select Image</title>
 </header>
+<style>
+    body{
+        font-family: Arial;
+    }
+    #button {
+        background-color: #00FF00;
+        border: none;
+        color: white;
+        margin-top: 50px;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+    .button:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 5px solid rgb(17, 16, 16);
+    }
+
+    th, td {
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    .inpt{
+    padding: 10px;
+    background: rgb(48, 37, 37); 
+    display: table;
+    color: #fff;
+    cursor: pointer;
+    }
+    input[type="file"] {
+        display: none;
+    }
+    input[type=text]{
+        width: 40%;
+        height: 5%;
+        border-radius: 5px;
+        border-color: rgb(150, 168, 150);
+        border-width: 3px;
+        border-style:solid;
+    }
+    input[type=text]:focus{
+        background-color: #ddd;
+        outline: none;
+    }
+    #cont{
+        margin-left: 70px;
+    }
+</style>
 <body>
 
-<h1 align="center">Please Upload the Image</h1>
+<h1 align="center" style="padding-top: 70px;">Please Upload the Image</h1>
 <br>
 <br>
 <br>
 <br>
 <form enctype="multipart/form-data" action="{{url_for(endpoint='extract')}}" method="post">
-<label for="upld">Upload the image</label>
-<input type="file" id = "upld" name="img"><br>
+<div id = "cont">
+<label class="inpt">Upload Image
+    <input type="file" id = "upld" name="img" size="60" required>
+</label>
+<br>
+
 <br>
 <br>
+
 <label for="fname">Select the class of the objects</label>
-<input type="text" id="fname" name="img_class"><br>
-<input type="submit">
+<input type="text" id="fname" name="img_class" required><br>
+<input type="submit" id = "button">
+</div>
 <br>
 <br>
-<h3>Valid classes are</h3>
-<p>
-            "background", "person", "bicycle", "car", "motorcycle",
-            "airplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant",
-            "unknown", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse",
-            "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "unknown", "backpack",
-            "umbrella", "unknown", "unknown", "handbag", "tie", "suitcase", "frisbee", "skis",
-            "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard",
-            "surfboard", "tennis racket", "bottle", "unknown", "wine glass", "cup", "fork", "knife",
-            "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog",
-            "pizza", "donut", "cake", "chair", "couch", "potted plant", "bed", "unknown", "dining table",
-            "unknown", "unknown", "toilet", "unknown", "tv", "laptop", "mouse", "remote", "keyboard",
-            "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "unknown",
-            "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"
-</p>
+<h2>Table of valid classes:</h2>
+
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <td>background</td>
+        <td>person</td>
+        <td>bicycle</td>
+        <td>car</td>
+        <td>motorcycle</td>
+        <td>airplane</td>
+        <td>bus</td>
+        <td>train</td>
+        <td>truck</td>
+        <td>boat</td>
+      </tr>
+      <tr>
+        <td>traffic light</td>
+        <td>fire hydrant</td>
+        <td>stop sign</td>
+        <td>parking meter</td>
+        <td>bench</td>
+        <td>bird</td>
+        <td>cat</td>
+        <td>dog</td>
+        <td>horse</td>
+        <td>sheep</td>
+      </tr>
+      <tr>
+        <td>cow</td>
+        <td>elephant</td>
+        <td>bear</td>
+        <td>zebra</td>
+        <td>giraffe</td>
+        <td>backpack</td>
+        <td>umbrella</td>
+        <td>handbag</td>
+        <td>tie</td>
+        <td>suitcase</td>
+      </tr>
+      <tr>
+        <td>frisbee</td>
+        <td>skis</td>
+        <td>snowboard</td>
+        <td>sports ball</td>
+        <td>kite</td>
+        <td>baseball bat</td>
+        <td>baseball glove</td>
+        <td>skateboard</td>
+        <td>surfboard</td>
+        <td>tennis racket</td>
+      </tr>
+      <tr>
+        <td>bottle</td>
+        <td>wine glass</td>
+        <td>cup</td>
+        <td>fork</td>
+        <td>knife</td>
+        <td>spoon</td>
+        <td>bowl</td>
+        <td>banana</td>
+        <td>apple</td>
+        <td>sandwich</td>
+      </tr>
+      <tr>
+        <td>orange</td>
+        <td>broccoli</td>
+        <td>carrot</td>
+        <td>hot dog</td>
+        <td>pizza</td>
+        <td>donut</td>
+        <td>cake</td>
+        <td>chair</td>
+        <td>couch</td>
+        <td>potted plant</td>
+      </tr>
+      <tr>
+        <td>bed</td>
+        <td>dining table</td>
+        <td>toilet</td>
+        <td>tv</td>
+        <td>laptop</td>
+        <td>mouse</td>
+        <td>remote</td>
+        <td>keyboard</td>
+        <td>cell phone</td>
+        <td>microwave</td>
+      </tr>
+      <tr>
+        <td>oven</td>
+        <td>toaster</td>
+        <td>sink</td>
+        <td>refrigerator</td>
+        <td>book</td>
+        <td>clock</td>
+        <td>vase</td>
+        <td>scissors</td>
+        <td>teddy bear</td>
+        <td>hair drier</td>
+      </tr>
+      <tr>
+        <td>toothbrush</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
 </form>
 </body>
 </html>
