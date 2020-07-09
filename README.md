@@ -1,3 +1,4 @@
+[![HitCount](http://hits.dwyl.com/amritans22/CaMicrosopeChallenge.svg)](http://hits.dwyl.com/amritans22/CaMicrosopeChallenge)
 # CaMicrosopeChallenge
 
 Web app to https://object-detection-nd-extraction.herokuapp.com/
