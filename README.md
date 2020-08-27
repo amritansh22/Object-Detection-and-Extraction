@@ -1,4 +1,6 @@
-Web app to https://object-detection-nd-extraction.herokuapp.com/
+#Object Detection and Extraction
+
+Web app: https://object-detection-nd-extraction.herokuapp.com/
 
 
 You can also clone the repositry and then run
