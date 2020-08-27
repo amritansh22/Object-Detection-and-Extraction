@@ -1,5 +1,3 @@
-# CaMicrosopeChallenge
-
 Web app to https://object-detection-nd-extraction.herokuapp.com/
 
 
